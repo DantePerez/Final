@@ -1,0 +1,346 @@
+/* PALETA DE COLORES
+
+#0487d9 azul claro
+#345c73 azul oscuro
+#66cdd9 celeste
+##05f2db verde aqua
+#bae7ef Azul grisaseo claro
+
+*/
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    color: #345c73;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    background: #66cdd9;
+}
+
+li a:hover {
+    color: #35F2F2;
+    background-color: rgb(106, 90, 205);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(93, 93, 93, 0.7);
+    width: 95%;
+    top: 2%;
+    left: 2.5%;
+}
+ul {
+    list-style: none;
+    display: flex;
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+nav img{
+    width: 5vw; height: 10vh;
+    padding-left: 45px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(253, 253, 253);
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    font-size: 100%;
+    padding: 30px;
+    margin-left: 10px;
+}
+
+#video{
+    height: 58vh;
+}
+
+section #tx1 h5{
+    background-color: #bae7ef;
+    padding: 25px;
+    width: 40vw; position: relative;
+    font-size: 15px;
+    top: 250px; left: 35px;
+}
+
+iframe{
+    width: 50%; height: 53vh;
+    top: -40px;
+    left: 47.5%;
+    position: relative;
+}
+
+#content{
+    background-color: #0487d9;
+    width: 100%; height: 684px;
+    position: relative;
+    top: 150px;
+}
+
+#content h5{
+    background-color: #bae7ef;
+    padding: 20px;
+    width: 55%;
+    position: relative;
+    font-size: 15px;
+    left: 40px;
+}
+
+.redes{
+    left: 28%;
+    background-color: #bae7ef;
+    width: 40%;
+    display: block;
+    position: relative;
+    list-style: none;
+    top: 15px;
+    padding: 1px 10px 1px 50px;
+    font-size: 16px;
+}
+
+.redes ul li{
+    padding-right: 100px;
+}
+
+footer{
+    background-color: #35F2F2;
+    width: 100%; height: 25px;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*CARRUSEL*/
+
+#carrusel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px 0 0;
+    float: right;
+}
+
+#carrusel h5{
+    background-color: #bae7ef;
+    padding: 20px;
+    font-size: 16px;
+    width: 45%;
+    top: 100px;
+    left: -250px;
+    position: relative;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container-all{
+    position: absolute;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    right: 40px;
+    top: 53px;
+}
+
+.slide{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagination{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.pagination-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 10px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+.pagination-item:hover{
+    transform: scale(2);
+}
+
+.pagination-item img{
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    transition: all 300ms;
+}
+
+.pagination-item:hover img{
+    opacity: 1;
+    transform: scale(1);
+}
+
+input[id="1"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"]{
+    background: #fff;
+}
+
+input[id="2"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"]{
+    background: #fff;
+}
+
+input[id="3"]:checked ~ .slide{
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
+    background: #fff;
+}
+
+@keyframes autoplay {
+    33%{
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+
+    66%{
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    100%{
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
+
+@keyframes slider{
+
+    to{background-position: 1200px;}
+
+}
+
+@media screen and (max-width: 482px){
+    nav img{
+        width: 15vw; height: 9vh;
+        padding-top: 5px; padding-left: 15px; 
+    }
+    nav ul li a{
+        font-size: 10px;
+        padding: 7px;
+    }
+    html, body{
+        width: 100%;
+        height: 100%;
+        background-color: #a52a2a;
+    }
+    #video{
+        height: 720px;
+    }
+    section #tx1 h5{
+        padding: 15px;
+        width: 60vw; position: relative;
+        font-size: 14px;
+        top: 130px; left: 80px;
+    }
+    iframe{
+        width: 75vw; height: 30vh;
+        top: 185px;
+        left: 12%;
+        position: relative;
+    }
+    #content{
+        top: 0px;
+        height: 1200px;
+    }
+    .container-all{
+        position: absolute;
+        max-width: 500px;
+        width: 80%;
+        border-radius: 6px;
+        overflow: hidden;
+        right: 50px;
+        top: 325px;
+    }
+    #content h5{
+        padding: 20px;
+        width: 55%;
+        position: relative;
+        font-size: 15px;
+        left: 90px; top: -20px;
+    }
+    #carrusel h5{
+        padding: 20px;
+        font-size: 16px;
+        width: 65%;
+        top: 395px;
+        left: 20px;
+        position: relative;
+    }
+    .redes{
+        left: 6%;
+        width: 80%;
+        display: block;
+        position: relative;
+        list-style: none;
+        top: -180px;
+        margin-top: 50px;
+        padding: 1px 1px 1px 30px;
+        font-size: 12px;
+    }
+    
+    .redes ul li{
+        padding-right: 55px;
+    }
+    footer p{
+        font-size: 16px;
+    }
+}

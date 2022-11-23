@@ -1,0 +1,74 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+    <head>
+        <title>Official Page</title>
+        <meta http-equiv="content-type"; charset="utf-8">
+        <link rel="stylesheet" href="comisiones.css"/>
+        <link rel="icon" type="image/x-icon" href="img/awa.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    </head>
+    <body>
+        <nav>
+            <img src="img/awa.png">
+            <div id="logo"></div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="acerca de.html">Info</a></li>
+                <li><a href="#">Comisiones</a></li>
+                <li><a href="https://www.uacj.mx/">UACJ</a></li>            
+            </ul>
+        </nav>
+
+        <div class="database">
+            <h2>Veamos que es lo que te gustaria</h2>
+    
+            <form class="comision" action="guardar.php" method="POST" id="contact form" runat="server" enctype="multipart/form-data">
+    
+                <label for="Nombre">Nombre</label><br>
+                <input type="text" id="Nombre" name="Nombre" maxlength="100" required><br><br>
+    
+                <label for="Apellidos">Apellidos</label><br>
+                <input type="text" id="Apellidos" name="Apellidos" maxlength="100" required><br><br>
+    
+                <label for="Tipo">Que tipo de dibujo quieres? (Ej. Fulbody, Halfbody, etc)</label><br>
+                <input type="text" id="Tipo" name="Tipo" maxlength="30" required><br><br>
+    
+                <label for="Img">*Inserte imagen del personaje"</label><br>
+                <input type="file" id="Img" name="Img" placeholder="Img" maxlength="30" required><br><br>
+
+                <label for="Descripcion">Por favor, explique que le gustaria de dibujo:</label><br>
+                <input type="text" id="Descripcion" name="Descripcion" maxlength="250" required><br><br>
+
+                <button class="submit" type="submit">Enviar</button><br><Br>
+            </form>
+        </div>
+
+        <div class = "container-all">
+            <input type = "radio" id="1" name = "image-slide" hidden/>
+            <input type = "radio" id="2" name = "image-slide" hidden/>
+            <input type = "radio" id="3" name = "image-slide" hidden/>
+
+            <div class = "slide">
+                <div class = "item-slide">
+                    <img src = "img/remember.jpg">
+                </div>
+    
+                <div class = "item-slide">
+                    <img src = "img/vita.jpg">
+                </div>
+    
+                <div class = "item-slide">
+                    <img src = "img/dance.jpg">
+                </div>
+            </div>
+        </div> 
+
+        <footer>
+            <p>
+                Autor: Dante Uriel P&eacute;rez Flores | UACJ - HTML5 Y CSS3 |
+            </p>
+        </footer>
+    </body>
+</html>
